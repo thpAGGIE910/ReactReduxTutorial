@@ -1,3 +1,5 @@
+### This is a fork of Stephen Grider's [ReduxSimpleStarter](https://github.com/StephenGrider/ReduxSimpleStarter) repository that is used in the [Modern React with Redux](https://www.udemy.com/react-redux/) Course
+
 # ReduxSimpleStarter
 
 Interested in learning [Redux](https://www.udemy.com/react-redux/)?
