@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 ### This is a fork of Stephen Grider's [ReduxSimpleStarter](https://github.com/StephenGrider/ReduxSimpleStarter) repository that is used in the [Modern React with Redux](https://www.udemy.com/react-redux/) Course
-=======
-### This is a fork of Stephen Grider's repository [ReduxSimpleStarter](https://github.com/StephenGrider/ReduxSimpleStarter) that is used in the [Modern React with Redux Course](https://www.udemy.com/react-redux/)
->>>>>>> Update README.md
 
 # ReduxSimpleStarter
 
