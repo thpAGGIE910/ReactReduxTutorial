@@ -12,26 +12,33 @@ const API_KEY = "AIzaSyAvsx-IA44Jm_14Svgp_K7Stq83VbqNgH0";
 
 // Create a new component. This component should produce some HTML. This a class factory that creates instances of the App class
 class App extends Component {
-    constructor(props) {
-        super(props);
-        
-        this.state = { videos: [] };
-
-        YTSearch({ key: API_KEY, term: 'surfboards' }, videos => {
-            this.setState({ videos });
-        });
-
-    }
-
-    render() {
-        return (
-            <div>
-                <SearchBar />
-                <VideoDetail video={this.state.videos[0]} />
-                <VideoList videos={this.state.videos} />
-            </div>
-        );
-    }
+	constructor(props) {
+		super(props);
+		
+		this.state = { 
+			videos: [],
+			selectedVideo: null
+		};
+		
+		YTSearch({ key: API_KEY, term: 'surfboards' }, (videos) => {
+			this.setState({ 
+				videos: videos,
+				selectedVideo: videos[0]
+			});
+		});	
+	}
+	
+	render() {
+		return (
+			<div>
+			<SearchBar />
+			<VideoDetail video={this.state.selectedVideo} />
+			<VideoList
+				onVideoSelect={ selectedVideo => this.setState({selectedVideo}) }
+				videos={this.state.videos} />
+			</div>
+		);
+	}
 }
 
 // Take this component's generated HTML and put it on the page (in the DOM)
